@@ -1,0 +1,48 @@
+# Grading configuration for Lab 3.1: Enterprise Architecture
+
+assignment:
+  id: L3.1-architecture
+  name: "Lab 3.1: Enterprise Architecture"
+  level: 3
+  type: lab
+  passing_score: 70
+
+checks:
+  - id: instantiate
+    name: "Agent Instantiation"
+    points: 20
+    type: instantiate
+    file: solution/agent.py
+  - id: swml_valid
+    name: "SWML Generation"
+    points: 20
+    type: swml_valid
+    file: solution/agent.py
+  - id: func_route
+    name: "route_call function"
+    points: 30
+    type: function_exists
+    file: solution/agent.py
+    function: route_call
+  - id: has_transfer
+    name: "Agent Transfer"
+    points: 30
+    type: swml_contains
+    file: solution/agent.py
+    require:
+      - text: "transfer"
+
+feedback:
+  pass: |
+    Excellent work! You've completed Lab 3.1: Enterprise Architecture.
+
+    **Next steps:**
+    - Review the concepts covered
+    - Continue to the next lab
+
+  fail: |
+    Some checks didn't pass. Review the requirements and try again.
+
+    **Tips:**
+    - Run `swaig-test solution/agent.py --list-tools` to verify functions
+    - Run `swaig-test solution/agent.py --dump-swml` to check SWML
