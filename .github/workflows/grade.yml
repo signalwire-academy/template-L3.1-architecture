@@ -7,6 +7,8 @@ on:
 
 jobs:
   grade:
+    # Skip if commit is from github-classroom[bot]
+    if: github.actor != 'github-classroom[bot]'
     runs-on: ubuntu-latest
     permissions:
       contents: read
