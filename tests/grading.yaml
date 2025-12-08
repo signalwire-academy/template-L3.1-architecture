@@ -27,10 +27,14 @@ checks:
   - id: has_transfer
     name: "Agent Transfer"
     points: 30
-    type: swml_contains
+    type: exec
     file: solution/agent.py
-    require:
-      - text: "transfer"
+    function: route_call
+    args:
+      department: "member"
+    expect:
+      stdout_contains:
+        - "transfer"
 
 feedback:
   pass: |
