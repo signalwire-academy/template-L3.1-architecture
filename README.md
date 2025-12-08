@@ -63,4 +63,10 @@ See `reference/starter.py` for a boilerplate template.
 
 ---
 
+## Next Assignment
+
+Ready to continue? [**Start Lab 3.2: Knowledge & RAG**](https://classroom.github.com/a/wKDWimeO)
+
+---
+
 *SignalWire AI Agents Certification*
